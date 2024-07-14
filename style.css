@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:monospace
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: hsl(43, 6%, 56%)
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width:100%;
+    margin: 0 auto;
+
+
+}
+
+header h1{
+    font-size: 2.5rem;
+    font-weight: 900px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: hsl(43, 71%, 7%)
+}
+
+#new-task-form {
+    display: flex;
+}
+
+input, button{
+    appearance: none;   
+    border: none;
+    background: none;
+    outline: none;
+
+}
+
+#new-task-input {
+    flex: 1 1 0;
+    background-color: hsl(45, 34%, 89%);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: rgb(100, 22, 22);
+    font-size: 1.25rem;
+
+}
+
+#new-task-input::placeholder {
+    font-style: italic;
+}
+
+#new-task-submit {
+    color: rgb(197, 15, 46);
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    background-image: linear-gradient(to right, hsl(256, 92%, 50%), hsl(29, 83%, 47%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#new-task-submit:hover {
+    opacity: 0.8;
+}
+
+#new-task-submit:active {
+    opacity: 0.6;
+}
+
+main{
+    flex: 1 1 0;
+    padding: 2rem 1 rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list {
+    padding: 1rem;
+}
+
+.task-list h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: hsl(0, 72%, 7%)
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between ;
+    background-color: hsla(54, 100%, 98%, 0.562) ;
+    padding: 1rem;
+    border-radius: 1rem;    
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content .text {
+    color: rgb(190, 18, 18) ;
+    font-weight: 500;
+    font-size: 1.5rem;
+    width: 100%;
+    display: block ;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only) {
+    color: rgb(102, 98, 99)
+}
+
+#tasks .task .actions {
+    display:flex;
+    margin: 0-0.5rem;
+}
+
+.task .action button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;  
+    transition: 0.4s;
+    padding: 0.5rem;
+
+}
+
+.task .action button.delete {
+color: crimson;
+    
+   
+}
+.task .action button:hover {
+    opacity: 0.8;
+}
+
+.task .action button:active {
+    opacity: 0.6;
+}
+
+.task .action button.edit {
+    background-image: linear-gradient(to right, hsl(256, 92%, 50%), hsl(29, 83%, 47%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    
+}
